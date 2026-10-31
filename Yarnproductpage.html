@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarn - Textonia Pakistan</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore Textonia Pakistan's premium yarn range — ACY, BY, CY, DDY, NFY, PFY, PMF, PST, PSY, RT and VFY sourced from trusted global suppliers.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Logo Folder/logo favicon1.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a2e; overflow-x: hidden; }
+        
+        /* TEXTONIA GREEN COLOR SCHEME */
+        :root { 
+            --primary-color: #18773d; 
+            --primary-dark: #11582c; 
+            --text-dark: #092319; 
+            --text-light: #325860; 
+            --bg-light: #f4f9f6; 
+            --white: #ffffff; 
+            --border-color: #e3e7e6; 
+        }
+
+        /* ============================================
+           NAVIGATION
+           ============================================ */
+        .navbar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.2rem 5%; max-width: 1400px; margin: 0 auto;
+            background: #ffffff; position: relative; z-index: 1000;
+        }
+        .logo { flex: 0 0 auto; }
+        .logo img { height: 70px; width: auto; cursor: pointer; }
+
+        .nav-links {
+            display: flex; gap: 2.5rem; align-items: center;
+            position: absolute; left: 50%; transform: translateX(-50%);
+        }
+        .nav-links > a {
+            text-decoration: none; color: #2b2b2b; font-weight: 500; font-size: 1rem;
+            transition: all 0.3s; position: relative; padding: 0.5rem 0;
+            display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+        }
+        .nav-links > a::after {
+            content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
+            background: var(--primary-color); transition: width 0.3s ease;
+        }
+        .nav-links > a:hover::after { width: 100%; }
+        .nav-links > a:hover { color: var(--primary-color); }
+
+        .nav-links > a.active-link { color: #b8945f; font-weight: 600; }
+        .nav-links > a.active-link::after { width: 100%; background: #b8945f; }
+        .nav-links > a.active-link:hover { color: #a07d47; }
+
+        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; color: var(--text-dark); }
+
+        /* ============================================
+           BREADCRUMB
+           ============================================ */
+        .breadcrumb {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem 5% 0;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        .breadcrumb a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .breadcrumb a:hover { color: var(--primary-color); }
+        .breadcrumb i {
+            font-size: 0.6rem;
+            margin: 0 0.6rem;
+            color: var(--border-color);
+        }
+        .breadcrumb span { color: var(--text-dark); font-weight: 600; }
+
+        /* ============================================
+           PAGE HEADER
+           ============================================ */
+        .page-header {
+            background: linear-gradient(135deg, #f4f9f6 0%, #ffffff 100%);
+            padding: 4rem 5% 4rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .page-header .page-tag {
+            display: inline-block;
+            background: rgba(24, 119, 61, 0.1);
+            color: var(--primary-color);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .page-header h1 {
+            font-size: 3rem;
+            color: var(--text-dark);
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .page-header h1 span { color: var(--primary-color); }
+        .page-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ============================================
+           YARN LIST GRID (text only, no images)
+           ============================================ */
+        .list-section {
+            padding: 5rem 5%;
+            background: #ffffff;
+        }
+        .list-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .list-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.6rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* left accent bar that grows on hover */
+        .list-card::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 4px;
+            background: var(--primary-color);
+            transform: scaleY(0);
+            transform-origin: center;
+            transition: transform 0.35s ease;
+        }
+
+        .list-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(24, 119, 61, 0.10);
+            border-color: var(--primary-color);
+        }
+
+        .list-card:hover::before { transform: scaleY(1); }
+
+        .list-card-text {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            text-align: left;
+        }
+
+        .list-card-text h3 {
+            font-size: 1.15rem;
+            color: var(--text-dark);
+            font-weight: 700;
+            margin: 0;
+            transition: color 0.3s;
+        }
+
+        .list-card-text p {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin: 0;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        .list-card:hover .list-card-text h3 { color: var(--primary-color); }
+
+        .list-card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            transition: all 0.35s ease;
+        }
+
+        .list-card:hover .list-card-icon {
+            background: var(--primary-color);
+            color: white;
+            transform: translateX(4px);
+        }
+
+        /* ============================================
+           BACK TO PRODUCTS BUTTON
+           ============================================ */
+        .back-section {
+            text-align: center;
+            padding: 0 5% 5rem;
+            background: #ffffff;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.9rem 2.2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 60px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(24, 119, 61, 0.25);
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer { background: #ffffff; color: #1a1a2e; padding: 4rem 5% 2rem; border-top: 1px solid var(--border-color); }
+        .footer-container { max-width: 1400px; margin: 0 auto; }
+        .footer-brand-social { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; padding: 2rem 0; border-top: 1px solid var(--border-color); margin-bottom: 1rem; }
+        .footer-logo-left { display: flex; align-items: center; gap: 12px; }
+        .footer-logo-left img { height: 80px; width: auto; }
+        .social-icons { display: flex; justify-content: center; gap: 1.5rem; }
+        .social-icons a { width: 40px; height: 40px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s; color: var(--primary-color); text-decoration: none; }
+        .social-icons a:hover { background: var(--primary-color); color: white; transform: translateY(-3px); }
+        .footer-cta { background: linear-gradient(135deg, #f4f9f6, #eef5ff); border-radius: 24px; padding: 2.5rem; text-align: center; margin-bottom: 2rem; border: 1px solid rgba(24, 119, 61, 0.08); }
+        .footer-cta-content h3 { font-size: 1.5rem; margin-bottom: 0.3rem; color: var(--text-dark); font-weight: 700; }
+        .footer-cta-content p { color: var(--text-light); margin-bottom: 1rem; }
+        .footer-cta-btn { display: inline-block; padding: 0.8rem 2.5rem; font-size: 1rem; font-weight: 600; color: white; background: var(--primary-color); border: none; border-radius: 60px; cursor: pointer; transition: all 0.3s; text-decoration: none; box-shadow: 0 6px 20px rgba(24, 119, 61, 0.25); }
+        .footer-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(24, 119, 61, 0.35); background: var(--primary-dark); }
+        .footer-bottom-links { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); }
+        .footer-bottom-left a { color: var(--text-light); text-decoration: none; font-size: 0.8rem; transition: color 0.3s; }
+        .footer-bottom-left a:hover { color: var(--primary-color); }
+        .footer-bottom-left span { color: var(--border-color); margin: 0 0.5rem; }
+        .footer-bottom-right p { color: var(--text-light); font-size: 0.75rem; }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 968px) {
+            .nav-links { gap: 1.5rem; }
+            .nav-links > a { font-size: 0.92rem; }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: block; }
+            .nav-links {
+                position: absolute; top: 100%; left: 0; right: 0; transform: none;
+                background: white; flex-direction: column; align-items: flex-start;
+                padding: 1.5rem 2rem; gap: 0; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                display: none; z-index: 999;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links > a { width: 100%; padding: 0.8rem 0; border-bottom: 1px solid var(--border-color); }
+
+            .page-header h1 { font-size: 2rem; }
+            .list-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+            .list-card { padding: 1.2rem 1.3rem; }
+            .list-card-text h3 { font-size: 1rem; }
+            .footer-brand-social { flex-direction: column; text-align: center; justify-content: center; }
+            .footer-bottom-links { flex-direction: column; text-align: center; }
+        }
+
+        @media (max-width: 480px) {
+            .list-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='index.html'">
+            <img src="Logo Folder/Textonia Pakistan.png" alt="Logo">
+        </div>
+
+        <div class="mobile-menu-btn" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="index.html#about-us">About Us</a>
+            <a href="productpage.html" class="active-link">Products</a>
+            <a href="Supplierpage.html">Supplier</a>
+            <a href="Customerpage.html">Buyers</a>
+            <a href="index.html#contact">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb" data-aos="fade-down">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="products.html">Products</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Yarn</span>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header" data-aos="fade-down">
+        <span class="page-tag">Product Category</span>
+        <h1>Our <span>Yarn</span> Range</h1>
+        <p>Premium quality yarns sourced from trusted global manufacturers — available in a wide variety of types to meet every textile requirement.</p>
+    </section>
+
+    <!-- Yarn List (text only, no images) -->
+    <section class="list-section">
+        <div class="list-grid">
+            
+            <a href="Yarn ACY.html" class="list-card" data-aos="fade-up" data-aos-delay="50">
+                <div class="list-card-text">
+                    <h3>Yarn ACY</h3>
+                    <p>Air Covered Yarn</p>
+                </div>
+                <div class="list-card-icon"><i class="fas fa-arrow-right"></i></div>
+            </a>
+
+            <a href="Yarn BY.html" class="list-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="list-card-text">
+                    <h3>Yarn BY</h3>
+                    <p>Blended Yarn</p>
+                </div>
+                <div class="list-card-icon"><i class="fas fa-arrow-right"></i></div>
+            </a>
+
+            <a href="Yarn CY.html" class="list-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="list-card-text">
+                    <h3>Yarn CY</h3>
+                    <p>Cotton Yarn</p>
+                </div>
+                <div class="list-card-icon"><i class="fas fa-arrow-right"></i></div>
+            </a>
+
+            <a href="Yarn DDY.html" class="list-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="list-card-text">
+                    <h3>Yarn DDY</h3>
+                    <p>Draw Textured Yarn</p>
+                </div>
+                <div class="list-card-icon"><i class="fas fa-arrow-right"></i></div>
+            </a>
+
+            <a href="Yarn NFY.html" class="list-card" data-aos="fade-up" data-aos-delay="250">
+                <div class="list-card-text">
+                    <h3>Yarn NFY</h3>
+                    <p>Nylon Filament Yarn</p>
+                </div>
+                <div class="list-card-icon"><i class="fas fa-arrow-right"></i></div>
+            </a>
+
+            <a href="Yarn PFY.html" class="list-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="list-card-text">
+                    <h3>Yarn PFY</h3>
+                    <p>Polyester Filament Yarn</p>
+                </div>
+                <div class="list-card-icon"><i class="fas fa-arrow-right"></i></div>
+            </a>
+
+            <a href="Yarn PMF.html" class="list-card" data-aos="fade-up" data-aos-delay="350">
+                <div class="list-card-text">
+                    <h3>Yarn PMF</h3>
+                    <p>Polyester Multifilament</p>
+                </div>
+                <div class="list-card-icon"><i class="fas fa-arrow-right"></i></div>
+            </a>
+
+            <a href="Yarn PST.html" class="list-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="list-card-text">
+                    <h3>Yarn PST</h3>
+                    <p>Polyester Staple</p>
+                </div>
+                <div class="list-card-icon"><i class="fas fa-arrow-right"></i></div>
+            </a>
+
+            <a href="Yarn PSY.html" class="list-card" data-aos="fade-up" data-aos-delay="450">
+                <div class="list-card-text">
+                    <h3>Yarn PSY</h3>
+                    <p>Polyester Spun Yarn</p>
+                </div>
+                <div class="list-card-icon"><i class="fas fa-arrow-right"></i></div>
+            </a>
+
+            <a href="Yarn RT.html" class="list-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="list-card-text">
+                    <h3>Yarn RT</h3>
+                    <p>Ring Twist Yarn</p>
+                </div>
+                <div class="list-card-icon"><i class="fas fa-arrow-right"></i></div>
+            </a>
+
+            <a href="Yarn VFY.html" class="list-card" data-aos="fade-up" data-aos-delay="550">
+                <div class="list-card-text">
+                    <h3>Yarn VFY</h3>
+                    <p>Viscose Filament Yarn</p>
+                </div>
+                <div class="list-card-icon"><i class="fas fa-arrow-right"></i></div>
+            </a>
+            
+        </div>
+    </section>
+
+    <!-- Back to Products Button -->
+    <div class="back-section" data-aos="fade-up">
+        <a href="productpage.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to All Products
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand-social" data-aos="fade-up" data-aos-delay="350">
+                <div class="footer-logo-left">
+                    <img src="Logo Folder/Textonia Pakistan.png" alt="Textonia Logo" style="height: 50px; width: auto;">
+                </div>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-cta" data-aos="zoom-in" data-aos-delay="450">
+                <div style="width: 40px; height: 3px; background: var(--primary-color); border-radius: 2px; margin: 0 auto 1rem;"></div>
+                <div class="footer-cta-content">
+                    <h3 style="font-size: 1.6rem; margin-bottom: 0.3rem; color: var(--text-dark); font-weight: 700;">Start sourcing today!</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1.2rem; font-size: 1rem;">Premium quality guaranteed.</p>
+                    <a href="index.html#contact" class="footer-cta-btn">
+                        Get started →
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom-links" data-aos="fade-up" data-aos-delay="500">
+                <div class="footer-bottom-left">
+                    <a href="sitemap.xml" target="_blank">Sitemap</a>
+                    <span>|</span>
+                    <a href="Privacy-Policy.html">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="Terms.html">Terms of Service</a>
+                </div>
+                <div class="footer-bottom-right">
+                    <p>© 2026 Textonia Pakistan. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 100 });
+
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        document.addEventListener('click', (e) => {
+            const navLinks = document.getElementById('navLinks');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            if (window.innerWidth <= 768 && navLinks && navLinks.classList.contains('active')) {
+                if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
