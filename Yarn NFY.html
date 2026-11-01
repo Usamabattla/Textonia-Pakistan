@@ -114,7 +114,7 @@
             top: 2rem;
         }
 
-        /* Table Styling */
+        /* Table Styling (Clean Client-Preferred Style) */
         .spec-table-wrapper {
             border-radius: 16px;
             overflow: hidden;
@@ -162,7 +162,6 @@
             line-height: 1.6;
         }
 
-        /* Specifically styling the first column for item names */
         .spec-table td:first-child {
             font-weight: 600;
             color: var(--text-dark);
@@ -174,32 +173,29 @@
         }
 
         /* ============================================
-           MERGED TYPE / COLOR CELL
+           MERGED COLORS CELL (Green Bullet Points)
            ============================================ */
-        .merged-type,
-        .merged-color {
-            display: block;
-            line-height: 1.5;
-        }
-
         .merged-type {
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 4px;
-        }
-
-        .merged-color {
-            font-size: 0.9rem;
-            color: var(--text-light);
+            display: block;
+            line-height: 1.6;
             font-weight: 500;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 14px;
+            margin-bottom: 6px;
+        }
+        
+        .merged-type:last-child {
+            margin-bottom: 0;
         }
 
-        .merged-color::before {
-            content: '● ';
+        .merged-type::before {
+            content: '●';
             color: var(--primary-color);
             font-size: 0.7rem;
-            margin-right: 4px;
-            vertical-align: middle;
+            position: absolute;
+            left: 0;
+            top: 2px;
         }
 
         /* ============================================
@@ -293,13 +289,14 @@
 
             <!-- RIGHT: Spec Table -->
             <div data-aos="fade-left" data-aos-delay="100">
+                
                 <div class="spec-table-wrapper">
                     <div class="spec-table-title">Semi Dull (SD)</div>
                     <table class="spec-table">
                         <thead>
                             <tr>
                                 <th>Product</th>
-                                <th>Type / Color</th>
+                                <th>Available Colors</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -307,61 +304,62 @@
                                 <td>DTY 40/34/1 NIM</td>
                                 <td>
                                     <span class="merged-type">RAW WHITE (RW)</span>
-                                    <span class="merged-color">DOPE DYED BLACK (DDB)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>DTY 40/34/2 NIM</td>
                                 <td>
                                     <span class="merged-type">RAW WHITE (RW)</span>
-                                    <span class="merged-color">DOPE DYED BLACK (DDB)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>DTY 70/24/1 NIM</td>
                                 <td>
                                     <span class="merged-type">RAW WHITE (RW)</span>
-                                    <span class="merged-color">DOPE DYED BLACK (DDB)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>DTY 70/24/2 NIM</td>
                                 <td>
                                     <span class="merged-type">RAW WHITE (RW)</span>
-                                    <span class="merged-color">DOPE DYED BLACK (DDB)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>DTY 70/48/1 NIM</td>
                                 <td>
                                     <span class="merged-type">RAW WHITE (RW)</span>
-                                    <span class="merged-color">DOPE DYED BLACK (DDB)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>DTY 70/48/2 NIM</td>
                                 <td>
                                     <span class="merged-type">RAW WHITE (RW)</span>
-                                    <span class="merged-color">DOPE DYED BLACK (DDB)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>DTY 70/68/1 NIM</td>
                                 <td>
                                     <span class="merged-type">RAW WHITE (RW)</span>
-                                    <span class="merged-color">DOPE DYED BLACK (DDB)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>DTY 70/68/2 NIM</td>
                                 <td>
                                     <span class="merged-type">RAW WHITE (RW)</span>
-                                    <span class="merged-color">DOPE DYED BLACK (DDB)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+
             </div>
 
         </div>
