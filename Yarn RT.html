@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rubber Thread - Textonia Pakistan</title>
+    <title>Product Details - Textonia Pakistan</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Explore our premium range of Rubber Thread.">
+    <meta name="description" content="Explore our premium range of Polyester Drawn Textured Yarn (DTY) and Fully Drawn Yarn (FDY).">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="Logo Folder/logo favicon1.png">
@@ -100,6 +100,11 @@
             grid-template-columns: 1fr 1.4fr;
             gap: 3rem;
             align-items: start;
+            margin-bottom: 5rem;
+        }
+        
+        .product-grid:last-child {
+            margin-bottom: 0;
         }
 
         .product-image-container img {
@@ -114,12 +119,13 @@
             top: 2rem;
         }
 
-        /* Table Styling */
+        /* Table Styling (Clean Client-Preferred Style) */
         .spec-table-wrapper {
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             border: 1px solid var(--border-color);
+            margin-bottom: 2.5rem;
         }
 
         .spec-table-title {
@@ -162,11 +168,10 @@
             line-height: 1.6;
         }
 
-        /* Specifically styling the first column for item names */
         .spec-table td:first-child {
             font-weight: 600;
             color: var(--text-dark);
-            width: 30%;
+            width: 40%;
         }
 
         .spec-table tr:hover td {
@@ -174,26 +179,29 @@
         }
 
         /* ============================================
-           MERGED COLORS CELL
+           MERGED COLORS CELL (Green Bullet Points)
            ============================================ */
-        .color-list {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .merged-color {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+        .merged-type {
+            display: block;
+            line-height: 1.6;
             font-weight: 500;
             color: var(--text-light);
+            position: relative;
+            padding-left: 14px;
+            margin-bottom: 6px;
+        }
+        
+        .merged-type:last-child {
+            margin-bottom: 0;
         }
 
-        .merged-color::before {
+        .merged-type::before {
             content: '●';
             color: var(--primary-color);
             font-size: 0.7rem;
+            position: absolute;
+            left: 0;
+            top: 2px;
         }
 
         /* ============================================
@@ -224,7 +232,7 @@
         @media (max-width: 968px) {
             .nav-links { gap: 1.5rem; }
             .nav-links > a { font-size: 0.92rem; }
-            .product-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .product-grid { grid-template-columns: 1fr; gap: 2rem; margin-bottom: 4rem; }
             .product-image-container img { position: static; }
         }
 
@@ -268,92 +276,319 @@
     </nav>
 
     <!-- ============================================
-         RUBBER THREAD SECTION
+         DTY SECTION
          ============================================ -->
     <section class="product-header" data-aos="fade-down">
-        <h1>Rubber Thread</h1>
+        <h1>Polyester Drawn Textured<br>Yarn (DTY)</h1>
     </section>
 
-    <!-- ============================================
-         IMAGE + TABLE SIDE BY SIDE
-         ============================================ -->
-    <section class="product-content-section">
+    <section class="product-content-section" style="padding-top: 0;">
+
+        <!-- DTY Semi Dull: Image + Table -->
         <div class="product-grid">
-
-            <!-- LEFT: Product Image -->
             <div class="product-image-container" data-aos="fade-right">
-                <img src="Product Images/Yarn RT.png" alt="Rubber Thread">
+                <img src="Product Images/PSF.jpeg" alt="Semi Dull DTY">
             </div>
-
-            <!-- RIGHT: Spec Table -->
             <div data-aos="fade-left" data-aos-delay="100">
                 <div class="spec-table-wrapper">
-                    <div class="spec-table-title">Rubber Thread Specs</div>
+                    <div class="spec-table-title">Semi Dull (SD)</div>
                     <table class="spec-table">
                         <thead>
                             <tr>
                                 <th>Item</th>
-                                <th>Ends</th>
                                 <th>Available Colors</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>32 HW</td>
-                                <td>40</td>
+                                <td>DTY 50/36 NIM</td>
                                 <td>
-                                    <div class="color-list">
-                                        <span class="merged-color">WHITE</span>
-                                        <span class="merged-color">BLACK</span>
-                                    </div>
+                                    <span class="merged-type">RAW WHITE (RW)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
                                 </td>
                             </tr>
                             <tr>
-                                <td>38 HW</td>
-                                <td>40</td>
+                                <td>DTY 50/36 SIM</td>
                                 <td>
-                                    <div class="color-list">
-                                        <span class="merged-color">WHITE</span>
-                                        <span class="merged-color">BLACK</span>
-                                    </div>
+                                    <span class="merged-type">RAW WHITE (RW)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
                                 </td>
                             </tr>
                             <tr>
-                                <td>40 HW</td>
-                                <td>40</td>
+                                <td>DTY 50/72 SIM</td>
+                                <td><span class="merged-type">RAW WHITE (RW)</span></td>
+                            </tr>
+                            <tr>
+                                <td>DTY 75/36 NIM</td>
                                 <td>
-                                    <div class="color-list">
-                                        <span class="merged-color">WHITE</span>
-                                        <span class="merged-color">BLACK</span>
-                                    </div>
+                                    <span class="merged-type">RAW WHITE (RW)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
                                 </td>
                             </tr>
                             <tr>
-                                <td>42 HW</td>
-                                <td>40</td>
+                                <td>DTY 75/36 SIM</td>
                                 <td>
-                                    <div class="color-list">
-                                        <span class="merged-color">WHITE</span>
-                                        <span class="merged-color">BLACK</span>
-                                    </div>
+                                    <span class="merged-type">RAW WHITE (RW)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
                                 </td>
                             </tr>
                             <tr>
-                                <td>52 HW</td>
-                                <td>40</td>
+                                <td>DTY 75/36 HIM</td>
                                 <td>
-                                    <div class="color-list">
-                                        <span class="merged-color">WHITE</span>
-                                        <span class="merged-color">BLACK</span>
-                                    </div>
+                                    <span class="merged-type">RAW WHITE (RW)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DTY 75/72 SIM</td>
+                                <td><span class="merged-type">RAW WHITE (RW)</span></td>
+                            </tr>
+                            <tr>
+                                <td>DTY 100/36 NIM</td>
+                                <td>
+                                    <span class="merged-type">RAW WHITE (RW)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DTY 100/48 NIM</td>
+                                <td>
+                                    <span class="merged-type">RAW WHITE (RW)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DTY 100/48 HIM</td>
+                                <td>
+                                    <span class="merged-type">RAW WHITE (RW)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DTY 100/144 SIM</td>
+                                <td>
+                                    <span class="merged-type">RAW WHITE (RW)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DTY 150/48 NIM</td>
+                                <td>
+                                    <span class="merged-type">RAW WHITE (RW)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DTY 150/48 SIM</td>
+                                <td><span class="merged-type">RAW WHITE (RW)</span></td>
+                            </tr>
+                            <tr>
+                                <td>DTY 150/48 HIM</td>
+                                <td>
+                                    <span class="merged-type">RAW WHITE (RW)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DTY 150/96 NIM</td>
+                                <td><span class="merged-type">RAW WHITE (RW)</span></td>
+                            </tr>
+                            <tr>
+                                <td>DTY 150/96 SIM</td>
+                                <td><span class="merged-type">RAW WHITE (RW)</span></td>
+                            </tr>
+                            <tr>
+                                <td>DTY 150/144 NIM</td>
+                                <td>
+                                    <span class="merged-type">RAW WHITE (RW)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DTY 150/144 SIM</td>
+                                <td>
+                                    <span class="merged-type">RAW WHITE (RW)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DTY 150/144 HIM</td>
+                                <td><span class="merged-type">RAW WHITE (RW)</span></td>
+                            </tr>
+                            <tr>
+                                <td>DTY 150/288 SIM</td>
+                                <td><span class="merged-type">RAW WHITE (RW)</span></td>
+                            </tr>
+                            <tr>
+                                <td>DTY 300/96 NIM</td>
+                                <td>
+                                    <span class="merged-type">RAW WHITE (RW)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DTY 300/96 SIM</td>
+                                <td><span class="merged-type">RAW WHITE (RW)</span></td>
+                            </tr>
+                            <tr>
+                                <td>DTY 300/96 HIM</td>
+                                <td>
+                                    <span class="merged-type">RAW WHITE (RW)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DTY 300/576 SIM</td>
+                                <td><span class="merged-type">RAW WHITE (RW)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- DTY Full Dull: Table Only -->
+        <div class="spec-table-wrapper" data-aos="fade-up" style="max-width: 900px; margin: 0 auto 5rem auto;">
+            <div class="spec-table-title">Full Dull (FD)</div>
+            <table class="spec-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Available Colors</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>COTTON LIKE 32S</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                    <tr><td>COTTON LIKE 40S</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                    <tr><td>COTTON LIKE 60S</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                    <tr><td>COTTON LIKE 80S</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                    <tr><td>COTTON LIKE 100S</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- DTY Cationic Dyeable: Table Only -->
+        <div class="spec-table-wrapper" data-aos="fade-up" style="max-width: 900px; margin: 0 auto;">
+            <div class="spec-table-title">Cationic Dyeable (CD)</div>
+            <table class="spec-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Available Colors</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>DTY 75/72 SIM</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <!-- ============================================
+         FDY SECTION
+         ============================================ -->
+    <section class="product-header" data-aos="fade-down">
+        <h1>Polyester Fully Drawn<br>Yarn (FDY)</h1>
+    </section>
+
+    <section class="product-content-section" style="padding-top: 0;">
+        
+        <!-- FDY Semi Dull: Image + Table -->
+        <div class="product-grid">
+            <div class="product-image-container" data-aos="fade-right">
+                <img src="Product Images/Full Dull fdy.png" alt="Semi Dull FDY">
+            </div>
+            <div data-aos="fade-left" data-aos-delay="100">
+                <div class="spec-table-wrapper">
+                    <div class="spec-table-title">Semi Dull (SD)</div>
+                    <table class="spec-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Available Colors</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>FDY 30/24</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                            <tr><td>FDY 40/12</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                            <tr><td>FDY 40/18</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                            <tr><td>FDY 40/24</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                            <tr><td>FDY 50/18</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                            <tr><td>FDY 50/24</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                            <tr><td>FDY 50/36</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                            <tr><td>FDY 75/36</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                            <tr><td>FDY 75/72</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                            <tr>
+                                <td>FDY 100/36</td>
+                                <td>
+                                    <span class="merged-type">RAW WHITE (RW)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-
         </div>
+
+        <!-- FDY Trilobal Bright: Image + Table -->
+        <div class="product-grid">
+            <div class="product-image-container" data-aos="fade-right">
+                <img src="Product Images/TBR.png" alt="Trilobal Bright FDY">
+            </div>
+            <div data-aos="fade-left" data-aos-delay="100">
+                <div class="spec-table-wrapper">
+                    <div class="spec-table-title">Trilobal Bright (TBR)</div>
+                    <table class="spec-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Available Colors</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>FDY 50/36</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                            <tr><td>FDY 75/36</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                            <tr><td>FDY 100/36</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                            <tr><td>FDY 108/48</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                            <tr><td>FDY 109/48</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                            <tr>
+                                <td>FDY 150/48</td>
+                                <td>
+                                    <span class="merged-type">RAW WHITE (RW)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>FDY 300/96</td>
+                                <td>
+                                    <span class="merged-type">RAW WHITE (RW)</span>
+                                    <span class="merged-type">DOPE DYED BLACK (DDB)</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- FDY Cationic Dyeable: Table Only -->
+        <div class="spec-table-wrapper" data-aos="fade-up" style="max-width: 900px; margin: 0 auto;">
+            <div class="spec-table-title">Cationic Dyeable (CD)</div>
+            <table class="spec-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Available Colors</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>FDY 50/24</td><td><span class="merged-type">RAW WHITE (RW)</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+
     </section>
 
     <!-- Footer -->
